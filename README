@@ -1,0 +1,6 @@
+EXAMPLE OF A TWITTER BOT FROM THE BASH COMMAND-LINE
+	Displays a random quote from the novel "Fight Club" by Chuck Palahniuk.
+REQUIREMENTS
+	Python Twitter API + command-line utility found at:
+
+Usage:	./fc-random-quote.sh
