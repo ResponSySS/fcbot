@@ -25,6 +25,6 @@ if [[ $# -gt 0 ]]; then
 	exit
 fi
 
-sort -R $f_quotes | head -1
+shuf -n 1 $f_quotes
 
 exit
