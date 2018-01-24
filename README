@@ -35,4 +35,4 @@ USAGE
     $ ./tweet.sh              # tweets a quote
     $ ./fc-random-quote.sh    # prints a quote
 
-# vim: ts=4:sw=4:expandtab
+: vim: ts=4:sw=4:expandtab
