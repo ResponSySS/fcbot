@@ -10,4 +10,4 @@
 #       CREATED: 06/07/16 23:16
 #===============================================================================
 
-sort -R $HOME/Devel/Src/Bash/fcbot/fc.txt | head -1 | twitter --oauth $HOME/.twitter_oauth_fcbot set
+shuf -n 1 $HOME/Devel/Src/Bash/fcbot/fc.txt | twitter --oauth $HOME/.twitter_oauth_fcbot set

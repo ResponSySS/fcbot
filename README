@@ -1,6 +1,36 @@
-EXAMPLE OF A TWITTER BOT FROM THE BASH COMMAND-LINE
-	Displays a random quote from the novel "Fight Club" by Chuck Palahniuk.
-REQUIREMENTS
-	Python Twitter API + command-line utility found at:
+EXAMPLE OF A VERY SIMPLE TWITTER BOT FROM THE BASH COMMAND-LINE
 
-Usage:	./fc-random-quote.sh
+This particular bot randomly tweets a quote from the novel "Fight Club" by Chuck
+Palahniuk.
+
+REQUIREMENTS
+    * The (superior) minimalist Python Twitter API, plus its command-line utility
+      found at: http://mike.verdone.ca/twitter/
+
+HOW TO INSTALL
+    * Installation of the minimalist Python Twitter API requires Python's 
+      'setuptools'; you can probably install it through your package manager.
+        $ sudo { apt-get install | pacman -S | ... } python-setuptools
+    * Install the minimalist Python Twitter API through 'easy_install' (provided
+      by 'setuptools'; see: http://mike.verdone.ca/twitter/)
+      $ sudo easy_install twitter
+    * Prepare the Twitter API to interact with your account through OAuth
+      permission; this is simply done by using the command-line tool 'twitter'
+      for the first time with the '--oauth' argument:
+      $ twitter --oauth {OAUTH_FILE}
+      (where OAUTH_FILE is a filename to store OAuth credentials to)
+
+HOW IT WORKS
+    * We simply store all the possible tweets into a text file (here named
+      "fc.txt").
+    * With a simple one-liner, we can then tweet whatever we want from this file,
+      picking a random line:
+      $ shuf -n 1 /path/to/fc.txt | twitter --oauth {OAUTH_FILE} set
+    * We can now store this command-line into a script that would get executed on
+      a regular basis through a job scheduler like 'cron' (here named "tweet.sh")
+
+USAGE
+    ./tweet.sh              # tweets a quote
+    ./fc-random-quote.sh    # prints a quote
+
+# vim: ts=4:sw=4:expandtab
