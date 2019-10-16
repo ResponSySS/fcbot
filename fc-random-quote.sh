@@ -11,7 +11,7 @@
 #  REQUIREMENTS: ---
 #          BUGS: ---
 #         NOTES: ---
-#        AUTHOR: Sylvain Saubier (ResponSyS), mail@systemicresponse.com
+#        AUTHOR: Sylvain Saubier (ResponSyS), mail@sylsau.com
 #  ORGANIZATION: 
 #       CREATED: 13/06/16 12:12
 #      REVISION:  ---
