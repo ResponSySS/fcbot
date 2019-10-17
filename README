@@ -2,17 +2,17 @@
 EXAMPLE OF A VERY SIMPLE TWITTER BOT POWERED BY JUST ONE LINE OF BASH
 =====================================================================
 
-This bot randomly tweets a quote from the novel "Fight Club" by Chuck
+This particular bot randomly tweets a quote from the novel "Fight Club" by Chuck
 Palahniuk.
 
 REQUIREMENTS
     * `twurl` to access Twitter API: https://github.com/twitter/twurl
-
-HOW TO INSTALL
-    * `gem install twurl`
-    * Create a Twitter app and add it to twurl with the `authorize` command (see
-      `twurl -T` for help)
-        $ sudo easy_install twitter
+        * it's a ruby program which need you to install `ruby` and `rubygems`
+          or `ruby-dev` (depending on your distribution)
+        * then install it with `gem install twurl`
+    * Create a Twitter app and add it to twurl with the following command:
+      `twurl authorize -c '[consumer key]' -s '[consumer secret key]'`
+      (see `twurl -T` for a tutorial)
 
 HOW IT WORKS
     * We simply store all the possible tweets into a text file (here named
@@ -20,8 +20,8 @@ HOW IT WORKS
     * With a simple one-liner, we can then tweet whatever we want from this file,
       picking a random line:
         $ twurl -d "status=$(shuf -n 1 /path/to/fc.txt)" /1.1/statuses/update.json
-    * We can now store this command-line into a script that would get executed on
-      a regular basis through a job scheduler like 'cron' (here named "tweet.sh")
+    * We can now store this command into a script that would get executed on a
+      regular basis through a job scheduler like 'cron' (here named "tweet.sh")
 
 USAGE
     $ ./tweet.sh              # tweets a quote
